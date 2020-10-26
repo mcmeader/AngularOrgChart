@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="title">
+        Org Chart
+    </div>
+    <div *ngIf="baseEmployee != undefined">
+        <orgchart-node [employee]="baseEmployee"></orgchart-node>
+    </div>
+</div>

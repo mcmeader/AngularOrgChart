@@ -1,0 +1,12 @@
+<div>
+    <div class='mainLink'>
+        <anchor-tag [class]="mainLink.class" [link]="mainLink.link" [text]="mainLink.text" [currentUrl]="url"
+            (newUrl)="updateUrl($event)">
+        </anchor-tag>
+    </div>
+    <div class='subLink'>
+        <anchor-tag *ngIf="displayCondition" [class]="subLink.class" [link]="subLink.link" [text]="subLink.text"
+            [currentUrl]="url" (newUrl)="updateUrl($event)">
+        </anchor-tag>
+    </div>
+</div>

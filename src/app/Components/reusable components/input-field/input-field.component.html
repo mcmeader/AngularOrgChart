@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label class="text">{{text}}</label>
+    <input required [ngModel]="input" [id]="name" [name]="name" type='text' class="input form-control"
+        [maxlength]="maxLength">
+    <div *ngIf='input != undefined'>
+        <div *ngIf="ngModel.invalid" class="alert alert-danger">
+            Input contains an invalid character!</div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.appContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: #525f6e;
+    color: white;
+    display: grid;
+    margin:-10px;
+    flex: 1;
+    grid-template-columns: 175px auto;
+    grid-template-rows: 75px auto;
+    grid-template-areas:
+        "header header"
+        "sidebar body"
+}
+
+.appHeader {
+    grid-area: header;
+    display: flex;
+    padding: 10px;
+}
+.appSidebar {
+    grid-area: sidebar;
+    display: flex;
+    padding: 10px;
+    padding-left:20px;
+    border-radius: 0px 0px 8px 8px;
+}
+.appContent {
+    background-color:#1B2431;
+    grid-area: body;
+    flex:1;
+    justify-content: flex-start;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px 0px 0px 0px;
+}

@@ -1,0 +1,18 @@
+<div className="componentContainer">
+    <div *ngIf="employee != undefined">
+        <div class='component' *ngIf='employee != undefined'>
+            <div>
+                {{employee.firstName + " " + employee.lastName}}
+            </div>
+            <div>
+                {{employee.jobTitle.name}}
+            </div>
+            <button class="button" (click)="clickHandler()">{{buttonText}}</button>
+        </div>
+    </div>
+    <div class="children" *ngIf="managedEmployees != undefined">
+        <div *ngFor="let managedEmployee of managedEmployees">
+            <orgchart-node [employee]="managedEmployee"></orgchart-node>
+        </div>
+    </div>
+</div>

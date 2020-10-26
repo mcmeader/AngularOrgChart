@@ -1,0 +1,14 @@
+<div class='container'>
+    <anchor-tag [class]="sidebarData[0].class" [link]="sidebarData[0].link" [text]="sidebarData[0].text"
+        [currentUrl]="url" (newUrl)="updateUrl($event)">
+    </anchor-tag>
+    <sidebar-component [mainLink]="sidebarData[1]" [subLink]="sidebarData[2]" [url]="url" (newUrl)="updateUrl($event)"
+        [displayCondition]="showEmployees">
+    </sidebar-component>
+    <sidebar-component [mainLink]="sidebarData[3]" [subLink]="sidebarData[4]" [url]="url" (newUrl)="updateUrl($event)"
+        [displayCondition]="showDepartments">
+    </sidebar-component>
+    <sidebar-component [mainLink]="sidebarData[5]" [subLink]="sidebarData[6]" [url]="url" (newUrl)="updateUrl($event)"
+        [displayCondition]="showJobTitles">
+    </sidebar-component>
+</div>

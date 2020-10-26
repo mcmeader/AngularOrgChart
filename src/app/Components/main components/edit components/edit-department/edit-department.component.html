@@ -1,0 +1,9 @@
+<div class='container'>
+    <form #departmentForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>{{text}}</label>
+            <input required [(ngModel)]="department.name" name="input" type='text' class="form-control" />
+        </div>
+        <submit-button [form]="departmentForm"></submit-button>
+    </form>
+</div>

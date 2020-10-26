@@ -1,0 +1,20 @@
+<table class="container">
+    <thead class='header'>
+        <tr class='row'>
+            <th class='header' *ngFor="let data of headerData">
+                {{data}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class='row' *ngFor="let body of mappedBodyData">
+            <td class='data'>
+                {{body[0]}}
+            </td>
+            <td class='data'>
+                <anchor-tag [class]="'data'" [link]="link" [text]="'Edit'" [id]="body[1]"></anchor-tag>
+                <button (click)='onDelete(body[1])'>Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

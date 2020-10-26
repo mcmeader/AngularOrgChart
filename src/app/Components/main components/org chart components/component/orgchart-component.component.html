@@ -1,0 +1,7 @@
+<div class="container">
+    <div className='component' *ngIf='employee != undefined'>
+        {{employee.firstName + " " + employee.lastName}}
+        {{employee.jobTitle.name}}
+        <button class="button" (click)="showEmployees()">Show Employees</button>
+    </div>
+</div>

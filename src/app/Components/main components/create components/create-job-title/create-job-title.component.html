@@ -1,0 +1,6 @@
+<div class='container'>
+    <form #jobTitleForm="ngForm" (ngSubmit)="onSubmit(jobTitleForm)">
+        <input-field [text]="text" [name]="'jobTitle'" [input]=""></input-field>
+        <submit-button [form]="jobTitleForm"></submit-button>
+    </form>
+</div>

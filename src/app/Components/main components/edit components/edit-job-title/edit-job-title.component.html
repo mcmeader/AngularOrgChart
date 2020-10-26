@@ -1,0 +1,10 @@
+<div class='container'>
+    <form #jobTitleForm="ngForm" (ngSubmit)="onSubmit()">
+        <!-- TODO:Replace with Input-Field when figure out inheritence -->
+        <div class="form-group">
+            <label>{{text}}</label>
+            <input required [(ngModel)]="jobTitle.name" name="input" type='text' class='form-control' />
+        </div>
+        <submit-button [form]="jobTitleForm"></submit-button>
+    </form>
+</div>

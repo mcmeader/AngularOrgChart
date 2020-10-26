@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmployeesComponent } from './Components/main components/tabled components/employees/employees.component';
 import { DepartmentsComponent } from './Components/main components/tabled components/departments/departments.component';
 import { JobTitlesComponent } from './Components/main components/tabled components/job-titles/job-titles.component';
-import { ButtonComponent } from './Components/reusable components/button/button.component';
 import { CreateDepartmentComponent } from './Components/main components/create components/create-department/create-department.component';
 import { CreateEmployeeComponent } from './Components/main components/create components/create-employee/create-employee.component';
 import { CreateJobTitleComponent } from './Components/main components/create components/create-job-title/create-job-title.component';
@@ -35,7 +34,6 @@ import { SidebarComponent } from './Components/main components/sidebar component
     EmployeesComponent,
     DepartmentsComponent,
     JobTitlesComponent,
-    ButtonComponent,
     CreateDepartmentComponent,
     CreateEmployeeComponent,
     CreateJobTitleComponent,

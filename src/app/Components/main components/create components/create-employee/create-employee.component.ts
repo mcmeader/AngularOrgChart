@@ -4,9 +4,9 @@ import { IDepartment } from 'src/app/Interfaces/DepartmentInterface';
 import { IEmployee } from 'src/app/Interfaces/EmployeeInterface';
 import { IJobTitle } from 'src/app/Interfaces/JobTitleInterface';
 
-import { DepartmentService } from 'src/app/Services/department-service.service';
-import { EmployeeService } from 'src/app/Services/employee-service.service';
-import { JobTitleService } from 'src/app/Services/job-title-service.service';
+import { DepartmentService } from 'src/app/Services/department.service';
+import { EmployeeService } from 'src/app/Services/employee.service';
+import { JobTitleService } from 'src/app/Services/job-title.service';
 
 @Component({
   selector: 'app-create-employee',

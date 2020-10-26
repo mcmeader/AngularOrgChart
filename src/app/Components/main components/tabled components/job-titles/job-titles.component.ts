@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IJobTitle } from 'src/app/Interfaces/JobTitleInterface';
-import { JobTitleService } from 'src/app/Services/job-title-service.service';
+import { JobTitleService } from 'src/app/Services/job-title.service';
 
 @Component({
   selector: 'app-job-titles',

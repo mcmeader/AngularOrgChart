@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { IDepartment } from 'src/app/Interfaces/DepartmentInterface';
-import { DepartmentService } from 'src/app/Services/department-service.service';
+import { DepartmentService } from 'src/app/Services/department.service';
 
 @Component({
   selector: 'app-edit-department',

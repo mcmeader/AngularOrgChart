@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IEmployee } from 'src/app/Interfaces/EmployeeInterface';
-import { EmployeeService } from 'src/app/Services/employee-service.service';
+import { EmployeeService } from 'src/app/Services/employee.service';
 
 @Component({
   selector: 'app-org-chart',

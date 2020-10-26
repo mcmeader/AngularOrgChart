@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { IDepartment } from 'src/app/Interfaces/DepartmentInterface';
-import { DepartmentService } from 'src/app/Services/department-service.service';
+import { DepartmentService } from 'src/app/Services/department.service';
 
 @Component({
   selector: 'app-create-department',

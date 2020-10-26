@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { IJobTitle } from 'src/app/Interfaces/JobTitleInterface';
-import { JobTitleService } from 'src/app/Services/job-title-service.service';
+import { JobTitleService } from 'src/app/Services/job-title.service';
 
 @Component({
   selector: 'app-edit-job-title',

@@ -25,7 +25,6 @@ export class Sidebar implements OnInit {
   constructor(private router: Router) { }
 
   updateItemsShown() {
-    console.log(this.url)
     if (this.url.includes("employee")) {
       this.showEmployees = true
       this.showDepartments = false

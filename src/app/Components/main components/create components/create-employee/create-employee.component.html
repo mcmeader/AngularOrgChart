@@ -1,6 +1,6 @@
 <div class='container'>
     <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
-        <div class='form-group'>
+        <div class='fields form-group'>
             <input-field [text]="text[0]" [name]="'firstName'" [input]=""></input-field>
             <input-field [text]="text[1]" [name]="'lastName'" [input]=""></input-field>
             <input-field [text]="text[2]" [name]="'middleInitial'" [input]="" [maxLength]=1></input-field>
@@ -9,13 +9,15 @@
             <select-field [label]="selectLabelValues[1]" [input]="" [name]="'jobTitle'" [selectOptions]="jobTitles">
             </select-field>
             <div class="form-group">
-                <label>{{selectLabelValues[2]}}</label>
-                <select required class="form-control" [ngModel]="" [name]="'manager'">
+                <label class="text">{{selectLabelValues[2]}}</label>
+                <select required class="input form-control" [ngModel]="" [name]="'manager'">
                     <option *ngFor="let data of employees" [value]="data.id">{{data.firstName + " " + data.lastName}}
                     </option>
                 </select>
             </div>
         </div>
-        <submit-button [form]="employeeForm"></submit-button>
+        <div class="button">
+            <submit-button [form]="employeeForm"></submit-button>
+        </div>
     </form>
 </div>

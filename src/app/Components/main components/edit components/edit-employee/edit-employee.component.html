@@ -1,9 +1,12 @@
 <div class='container'>
     <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
-        <div class='form-group'>
-            <input-field [text]="text[0]" [name]="'firstName'" [input]="employee.firstName"></input-field>
-            <input-field [text]="text[1]" [name]="'lastName'" [input]="employee.lastName"></input-field>
-            <input-field [text]="text[2]" [name]="'middleInitial'" [input]="employee.middleInitial" [maxLength]="1">
+        <div class='form-group' *ngIf="departments != undefined">
+            <input-field [value]="'name'" [text]="text[0]" [name]="'firstName'" [input]="employee.firstName">
+            </input-field>
+            <input-field [value]="'employee'" [text]="text[1]" [name]="'lastName'" [input]="employee.lastName">
+            </input-field>
+            <input-field [value]="'middle'" [text]="text[2]" [name]="'middleInitial'" [input]="employee.middleInitial"
+                [maxLength]="1">
             </input-field>
             <select-field [label]="selectLabelValues[0]" [input]="employee.department.id" [name]="'department'"
                 [selectOptions]="departments">

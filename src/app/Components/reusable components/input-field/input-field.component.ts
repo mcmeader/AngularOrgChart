@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ControlContainer, NgForm } from '@angular/forms';
+import { ControlContainer, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'input-field',
@@ -9,12 +9,12 @@ import { ControlContainer, NgForm } from '@angular/forms';
 })
 export class InputFieldComponent implements OnInit {
   @Input() text: string
-  @Input() input
-  @Input() name
+  @Input() input: string
+  @Input() name: string
   @Input() maxLength: string
   @Input() inputCondition: boolean
+  @Input() value: string
 
-  invalidCharacters = new RegExp(/^[a-z .A-Z]+$/)
   errorText: string
 
   ngOnInit(): void {

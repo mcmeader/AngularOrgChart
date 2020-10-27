@@ -1,9 +1,12 @@
-<div class="form-group">
+<div class="inputContainer form-group">
     <label class="text">{{text}}</label>
-    <input required [ngModel]="input" [id]="name" [name]="name" type='text' class="input form-control"
-        [maxlength]="maxLength">
-    <div *ngIf='input != undefined'>
-        <div *ngIf="ngModel.invalid" class="alert alert-danger">
-            Input contains an invalid character!</div>
+    <input required #value="ngModel" [(ngModel)]="input" id="name" [name]="name" type='text' class="input form-control"
+        maxlength="maxLength" pattern="^[a-zA-Z]+$">
+</div>
+<div *ngIf="value.invalid && (value.dirty || value.touched)" class="error-message">
+    <div *ngIf="value.errors.pattern">
+        Field contains an invalid character!</div>
+    <div *ngIf="value.errors.required">
+        Field is required!
     </div>
 </div>

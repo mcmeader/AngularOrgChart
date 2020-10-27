@@ -12,8 +12,6 @@ export class InputFieldComponent implements OnInit {
   @Input() input: string
   @Input() name: string
   @Input() maxLength: string
-  @Input() inputCondition: boolean
-  @Input() value: string
 
   errorText: string
 

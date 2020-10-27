@@ -15,10 +15,13 @@ export class CreateJobTitleComponent {
   constructor(private jobTitleService: JobTitleService, private toastr: ToastrService) { }
 
   onSubmit(form) {
-    this.jobTitle.name = form.value.department
-    this.jobTitleService.createJobTitle(this.jobTitle).subscribe(() => {
-      this.toastr.success("JobTitle Created Successfully!")
-      form.reset()
-    })
+    this.jobTitle.name = form.value.jobTitle
+    this.jobTitleService.createJobTitle(this.jobTitle).subscribe(
+      () => {
+        this.toastr.success("Job Title Created Successfully!")
+        form.reset()
+      },
+      () => this.toastr.error("A Job Title With That Name Already Exists!")
+    )
   }
 }

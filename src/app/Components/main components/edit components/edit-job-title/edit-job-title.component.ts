@@ -25,8 +25,8 @@ export class EditJobTitleComponent implements OnInit {
   }
 
   onSubmit() {
-    this.jobTitleService.updateJobTitle(this.jobTitle).subscribe(() => {
-      this.toastr.success("Job Title Information Changed Successfully!")
-    })
+    this.jobTitleService.updateJobTitle(this.jobTitle).subscribe(
+      () => this.toastr.success("Department Updated Successfully!"),
+      () => this.toastr.error("A Department With That Name Already Exists!"))
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { throwError } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { IDepartment } from 'src/app/Interfaces/DepartmentInterface';
 import { IEmployee } from 'src/app/Interfaces/EmployeeInterface';
@@ -49,9 +50,10 @@ export class CreateEmployeeComponent implements OnInit {
         this.employeeService.getEmployeeById(form.value.manager).subscribe((value: IEmployee) => {
           this.employee.manager = value
           this.employeeService.createEmployee(this.employee).subscribe(() => {
-            this.toastr.success("Employee Successfully Created!")
+            this.toastr.success("Employee Created Successfully!")
             form.reset()
-          })
+          },
+            () => this.toastr.error("A Employee With That Name Already Exists!"))
         })
       })
     })

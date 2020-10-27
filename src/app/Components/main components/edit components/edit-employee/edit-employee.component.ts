@@ -59,9 +59,9 @@ export class EditEmployeeComponent implements OnInit {
         this.employee.jobTitle = value
         this.employeeService.getEmployeeById(form.value.manager).subscribe((value: IEmployee) => {
           this.employee.manager = value
-          this.employeeService.updateEmployee(this.employee, this.employee.id).subscribe(() => {
-            this.toastr.success("Employee Successfully Updated!")
-          })
+          this.employeeService.updateEmployee(this.employee, this.employee.id).subscribe(
+            () => this.toastr.success("Employee Edited Successfully!"),
+            () => this.toastr.error("An Employee With That Name Already Exists!"))
         })
       })
     })

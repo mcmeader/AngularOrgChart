@@ -8,7 +8,7 @@
             </select-field>
             <select-field [label]="selectLabelValues[1]" [input]="" [name]="'jobTitle'" [selectOptions]="jobTitles">
             </select-field>
-            <div class="form-group">
+            <div class="select-container form-group">
                 <label class="text">{{selectLabelValues[2]}}</label>
                 <select required class="input form-control" [ngModel]="" [name]="'manager'">
                     <option *ngFor="let data of employees" [value]="data.id">{{data.firstName + " " + data.lastName}}

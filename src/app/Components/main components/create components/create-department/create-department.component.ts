@@ -18,9 +18,12 @@ export class CreateDepartmentComponent {
 
   onSubmit(form) {
     this.department.name = form.value.department
-    this.departmentService.createDepartment(this.department).subscribe(() => {
-      this.toastr.success("Department Created Successfully!")
-      form.reset()
-    })
+    this.departmentService.createDepartment(this.department).subscribe(
+      () => {
+        this.toastr.success("Department Created Successfully!")
+        form.reset()
+      },
+      () => this.toastr.error("A Department With That Name Already Exists!")
+    )
   }
 }

@@ -13,7 +13,7 @@
     float: right;
 }
 
-.ng-valid[required],.ng-valid[pattern], .ng-valid.required {
+.ng-valid[required]:not(.ng-pristine):not(.ng-untouched),.ng-valid[pattern]:not(.ng-pristine):not(.ng-untouched), .ng-valid.required {
     border-right: 5px solid #42A948;
   }
 

@@ -25,7 +25,7 @@ export class DepartmentService {
   }
 
   getDepartmentById(departmentId: number) {
-    return this.http.get<IDepartment>(this.serviceUrl + "/" + departmentId)
+    return this.http.get<IDepartment>(this.serviceUrl + departmentId)
   }
 
   createDepartment(department: IDepartment) {
@@ -40,6 +40,6 @@ export class DepartmentService {
 
   deleteDepartment(departmentId: number) {
     this.departmentListChanged = true
-    return this.http.delete(this.serviceUrl + "/" + departmentId)
+    return this.http.delete(this.serviceUrl + departmentId)
   }
 }

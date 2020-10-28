@@ -25,7 +25,7 @@ export class JobTitleService {
   }
 
   getJobTitleById(jobTitleId: number) {
-    return this.http.get(this.serviceUrl + "/" + jobTitleId)
+    return this.http.get(this.serviceUrl + jobTitleId)
   }
 
   createJobTitle(jobTitle: IJobTitle) {
@@ -40,6 +40,6 @@ export class JobTitleService {
 
   deleteJobTitle(jobTitleId: number) {
     this.jobTitleListChanged = true
-    return this.http.delete(this.serviceUrl + "/" + jobTitleId)
+    return this.http.delete(this.serviceUrl + jobTitleId)
   }
 }

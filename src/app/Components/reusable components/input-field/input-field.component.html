@@ -1,7 +1,7 @@
 <div class="inputContainer form-group">
     <label class="text">{{text}}</label>
-    <input required #value="ngModel" [(ngModel)]="input" id="name" [name]="name" type='text' class="input form-control"
-        [maxlength]="maxLength" pattern="^[a-zA-Z]+$">
+    <input required #value="ngModel" [ngModel]="input" id="name" [name]="name" type='text' class="input form-control"
+        [maxlength]="maxLength" pattern="^[a-z A-Z]+$">
 </div>
 <div *ngIf="value.invalid && (value.dirty || value.touched)" class="error-message">
     <div *ngIf="value.errors.pattern">

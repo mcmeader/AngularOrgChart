@@ -24,8 +24,9 @@ export class EditDepartmentComponent implements OnInit {
       .subscribe((data: IDepartment) => this.department = data)
   }
 
-  onSubmit() {
-    this.departmentService.createDepartment(this.department).subscribe(
+  onSubmit(form) {
+    this.department.name = form.value.department
+    this.departmentService.updateDepartment(this.department).subscribe(
       () => this.toastr.success("Department Updated Successfully!"),
       () => this.toastr.error("A Department With That Name Already Exists!"))
   }

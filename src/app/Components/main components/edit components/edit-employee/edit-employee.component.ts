@@ -34,15 +34,17 @@ export class EditEmployeeComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    let jobTitleId = this.route.snapshot.paramMap.get("id")
-    this.employeeService.getEmployeeById(parseInt(jobTitleId))
+    let employeeId = parseInt(this.route.snapshot.paramMap.get("id"))
+    this.employeeService.getEmployeeById(employeeId)
       .subscribe((data: IEmployee) => {
         this.employee = data
         this.departmentService.getActiveDepartments().subscribe((value: IDepartment[]) => {
           this.departments = value
           this.jobTitleService.getJobTitles().subscribe((value: IJobTitle[]) => {
             this.jobTitles = value
-            this.employeeService.getEmployees().subscribe((value: IEmployee[]) => this.employees = value)
+            this.employeeService.getEmployees().subscribe((value: IEmployee[]) => this.employees =
+              value.filter(data => data.id != employeeId)
+            )
           })
         })
       })
@@ -59,7 +61,7 @@ export class EditEmployeeComponent implements OnInit {
         this.employee.jobTitle = value
         this.employeeService.getEmployeeById(form.value.manager).subscribe((value: IEmployee) => {
           this.employee.manager = value
-          this.employeeService.updateEmployee(this.employee, this.employee.id).subscribe(
+          this.employeeService.updateEmployee(this.employee).subscribe(
             () => this.toastr.success("Employee Edited Successfully!"),
             () => this.toastr.error("An Employee With That Name Already Exists!"))
         })

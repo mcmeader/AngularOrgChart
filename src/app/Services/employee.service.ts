@@ -25,7 +25,7 @@ export class EmployeeService {
   }
 
   getEmployeeById(employeeId: number) {
-    return this.http.get(this.serviceUrl + "/" + employeeId)
+    return this.http.get(this.serviceUrl + employeeId)
   }
 
   getEmployeesByManagerId(managerId: number) {
@@ -37,13 +37,13 @@ export class EmployeeService {
     return this.http.post(this.serviceUrl, employee)
   }
 
-  updateEmployee(employee: Object, employeeId: number) {
+  updateEmployee(employee: Object) {
     this.employeeListChanged = true
-    return this.http.put(this.serviceUrl + "/" + employeeId, employee)
+    return this.http.put(this.serviceUrl, employee)
   }
 
   deleteEmployee(employeeId) {
     this.employeeListChanged = true
-    return this.http.delete(this.serviceUrl + "/" + employeeId)
+    return this.http.delete(this.serviceUrl + employeeId)
   }
 }

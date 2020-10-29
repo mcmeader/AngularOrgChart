@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IEmployee } from 'src/app/Interfaces/EmployeeInterface';
 
 @Component({
@@ -6,16 +6,13 @@ import { IEmployee } from 'src/app/Interfaces/EmployeeInterface';
   templateUrl: './orgchart-component.component.html',
   styleUrls: ['./orgchart-component.component.scss']
 })
-export class OrgchartComponent implements OnInit {
+export class OrgchartComponent {
   @Input() employee: IEmployee
+  @Input() clickHandler: Function
+  @Input() buttonText: string
+  @Output() buttonClick = new EventEmitter()
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onClick() {
+    this.buttonClick.emit()
   }
-
-  showEmployees() {
-
-  }
-
 }

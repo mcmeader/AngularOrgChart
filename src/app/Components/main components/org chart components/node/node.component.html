@@ -1,17 +1,10 @@
-<div className="componentContainer">
-    <div *ngIf="employee != undefined">
-        <div class='component' *ngIf='employee != undefined'>
-            <div>
-                {{employee.firstName + " " + employee.lastName}}
-            </div>
-            <div>
-                {{employee.jobTitle.name}}
-            </div>
-            <button class="button" (click)="clickHandler()">{{buttonText}}</button>
-        </div>
+<div class="container">
+    <div class='component'>
+        <orgchart-component class='component' [employee]="employee" [clickHandler]="clickHandler"
+            [buttonText]="buttonText" (buttonClick)="clickHandler()"></orgchart-component>
     </div>
-    <div class="children" *ngIf="managedEmployees != undefined">
-        <div *ngFor="let managedEmployee of managedEmployees">
+    <div class='child-container'>
+        <div class="children" *ngFor="let managedEmployee of managedEmployees">
             <orgchart-node [employee]="managedEmployee"></orgchart-node>
         </div>
     </div>

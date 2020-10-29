@@ -51,6 +51,7 @@ export class CreateEmployeeComponent implements OnInit {
           this.employee.manager = value
           this.employeeService.createEmployee(this.employee).subscribe(() => {
             this.toastr.success("Employee Created Successfully!")
+            this.employeeService.getEmployees().subscribe((value: IEmployee[]) => this.employees = value.filter(data => data.id != this.employee.id))
             form.reset()
           },
             () => this.toastr.error("A Employee With That Name Already Exists!"))

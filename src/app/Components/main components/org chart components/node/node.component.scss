@@ -1,4 +1,4 @@
-.componentContainer{
+.container{
     flex:1;
     display:flex;
     position: relative;
@@ -6,7 +6,7 @@
     align-content: center;
 }
 
-.children {
+.child-container {
     display:flex;
     flex-direction: row;
     position: relative;
@@ -14,7 +14,7 @@
     justify-items: initial;
 }
 
-.componentContainer:not(:last-child)::before{
+.container:not(:last-child)::before{
     border-top: solid 1px white;
     content: "";
     left: 50%;
@@ -25,7 +25,7 @@
     height:10%;
 }
 
-.componentContainer:not(:first-child)::after, .componentContainer:not(:first-child)::before{
+.container:not(:first-child)::after, .container:not(:first-child)::before{
     border-top: solid 1px white;
     content: "";
     left: 0;
@@ -36,7 +36,7 @@
     height:10%;
 }
 
-.componentContainer:not(:last-child)::after{
+.container:not(:last-child)::after{
     border-left: solid 1px white;
     content: "";
     left: 50%;
@@ -47,7 +47,7 @@
     height:10px;
 }
 
-.componentContainer:last-child::after{
+.container:last-child::after{
     border-top: none;
     border-left: solid 1px white;
     content: "";
@@ -58,24 +58,3 @@
     bottom:0;
     height:10px;
 }
-
-.component{
-    flex: 1;
-    height: 60px;
-    margin-top:5px;
-    margin-right:10px;
-    margin-bottom:5px;
-    display: inline-block;
-    position: relative;
-    white-space: nowrap;
-    padding-top:10px;
-}
-
-.button{
-    white-space: nowrap
- }
- 
- .button:hover{
-    transform: scale(1.1);
- }
- 

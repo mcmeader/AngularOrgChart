@@ -26,6 +26,7 @@ import { InputFieldComponent } from './Components/reusable components/input-fiel
 import { SelectFieldComponent } from './Components/reusable components/select-field/select-field.component';
 import { Sidebar } from './Components/main components/sidebar components/sidebar/sidebar.component';
 import { SidebarComponent } from './Components/main components/sidebar components/sidebar-component/sidebar-component.component';
+import { ManagerSelectFieldComponent } from './Components/reusable components/manager-select-field/manager-select-field.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SidebarComponent } from './Components/main components/sidebar component
     OrgchartComponent,
     InputFieldComponent,
     SelectFieldComponent,
-    SidebarComponent
+    SidebarComponent,
+    ManagerSelectFieldComponent
   ],
   imports: [
     BrowserModule,

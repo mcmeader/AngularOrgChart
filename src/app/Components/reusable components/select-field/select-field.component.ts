@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,6 @@ import { ControlContainer, NgForm } from '@angular/forms';
 })
 export class SelectFieldComponent {
   @Input() label: string
-  @Input() id: string
   @Input() input: string
   @Input() name: string
   @Input() selectOptions: Object[]

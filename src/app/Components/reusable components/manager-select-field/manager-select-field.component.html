@@ -1,0 +1,7 @@
+<div class="select-container form-group">
+    <label class="text">{{text}}</label>
+    <select required class="input form-control" [ngModel]="input" [name]="name">
+        <option *ngFor="let data of employees" [value]="data.id">{{data.firstName + " " + data.lastName}}
+        </option>
+    </select>
+</div>

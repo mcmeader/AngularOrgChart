@@ -8,13 +8,8 @@
             </select-field>
             <select-field [label]="selectLabelValues[1]" [input]="" [name]="'jobTitle'" [selectOptions]="jobTitles">
             </select-field>
-            <div class="select-container form-group">
-                <label class="text">{{selectLabelValues[2]}}</label>
-                <select required class="input form-control" [ngModel]="" [name]="'manager'">
-                    <option *ngFor="let data of employees" [value]="data.id">{{data.firstName + " " + data.lastName}}
-                    </option>
-                </select>
-            </div>
+            <manager-select-field [text]="selectLabelValues[2]" [input]="" [employees]="employees" [name]="'manager'">
+            </manager-select-field>
         </div>
         <div class="button">
             <submit-button [form]="employeeForm"></submit-button>

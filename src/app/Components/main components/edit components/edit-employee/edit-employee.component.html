@@ -13,14 +13,9 @@
             <select-field [label]="selectLabelValues[1]" [input]="employee.jobTitle.id" [name]="'jobTitle'"
                 [selectOptions]="jobTitles">
             </select-field>
-            <div class="selectContainer form-group">
-                <label class="text">{{selectLabelValues[2]}}</label>
-                <select required class="input form-control" [ngModel]="employee.manager.id" [name]="'manager'">
-                    <option *ngFor="let data of employees" [value]="data.id">
-                        {{data.firstName + " " + data.lastName}}
-                    </option>
-                </select>
-            </div>
+            <manager-select-field [text]="selectLabelValues[2]" [input]="employee.manager.id" [employees]="employees"
+                [name]="'manager'">
+            </manager-select-field>
             <div class="button">
                 <submit-button [form]="employeeForm"></submit-button>
             </div>

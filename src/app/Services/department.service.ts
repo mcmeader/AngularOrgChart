@@ -21,7 +21,7 @@ export class DepartmentService {
   }
 
   getArchivedDepartments() {
-    return this.http.get(this.archivedDeptsUrl)
+    return this.http.get<IDepartment[]>(this.archivedDeptsUrl)
   }
 
   getDepartmentById(departmentId: number) {
@@ -29,17 +29,14 @@ export class DepartmentService {
   }
 
   createDepartment(department: IDepartment) {
-    this.departmentListChanged = true
     return this.http.post(this.serviceUrl, department)
   }
 
   updateDepartment(department: IDepartment) {
-    this.departmentListChanged = true
     return this.http.put(this.serviceUrl, department)
   }
 
   deleteDepartment(departmentId: number) {
-    this.departmentListChanged = true
     return this.http.delete(this.serviceUrl + departmentId)
   }
 }

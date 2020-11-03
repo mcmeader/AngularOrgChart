@@ -12,4 +12,8 @@ export class InputFieldComponent {
   @Input() input: string
   @Input() name: string
   @Input() maxLength: string
+
+  inputPattern = "^[a-z A-Z]+$"
+  patternErrorMessage = "Field contains an invalid character!"
+  requiredErrorMessage = "Field is required!"
 }

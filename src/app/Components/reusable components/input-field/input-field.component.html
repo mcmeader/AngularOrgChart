@@ -1,12 +1,12 @@
 <div class="input-container form-group">
     <label class="text">{{text}}</label>
-    <input required #value="ngModel" [ngModel]="input" id="name" [name]="name" type='text' class="input form-control"
-        [maxlength]="maxLength" pattern="^[a-z A-Z]+$">
+    <input required #value="ngModel" [ngModel]="input" [name]="name" type='text' class="input form-control"
+        [maxlength]="maxLength" pattern="inputPattern">
 </div>
 <div *ngIf="value.invalid && (value.dirty || value.touched)" class="error-message">
-    <div *ngIf="value.errors.pattern">
-        Field contains an invalid character!</div>
-    <div *ngIf="value.errors.required">
-        Field is required!
+    <div *ngIf="value.errors.pattern" class="error-pattern">
+        {{patternErrorMessage}}</div>
+    <div *ngIf="value.errors.required" class="error-required">
+        {{requiredErrorMessage}}
     </div>
 </div>

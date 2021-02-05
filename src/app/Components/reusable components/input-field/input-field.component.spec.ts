@@ -32,7 +32,8 @@ describe('InputFieldComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [TestHostComponent, InputFieldComponent, NgForm],
+      declarations: [TestHostComponent, InputFieldComponent],
+      schemas: [NgForm]
     })
       .compileComponents();
   });

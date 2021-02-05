@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
 import { EmployeesComponent } from './Components/main components/tabled components/employees/employees.component';
 import { DepartmentsComponent } from './Components/main components/tabled components/departments/departments.component';
 import { JobTitlesComponent } from './Components/main components/tabled components/job-titles/job-titles.component';
@@ -18,7 +19,6 @@ import { AnchorTagComponent } from './Components/reusable components/anchor-tag/
 import { EditDepartmentComponent } from './Components/main components/edit components/edit-department/edit-department.component';
 import { EditEmployeeComponent } from './Components/main components/edit components/edit-employee/edit-employee.component';
 import { EditJobTitleComponent } from './Components/main components/edit components/edit-job-title/edit-job-title.component';
-import { CommonModule } from '@angular/common';
 import { OrgchartComponent } from './Components/main components/org chart components/component/orgchart-component';
 import { OrgChartComponent } from './Components/main components/org chart components/org-chart/org-chart.component';
 import { NodeComponent } from './Components/main components/org chart components/node/node.component';
@@ -55,7 +55,7 @@ import { ManagerSelectFieldComponent } from './Components/reusable components/ma
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
